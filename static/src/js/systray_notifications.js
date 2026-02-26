@@ -58,7 +58,7 @@ class AdvanceNotifications extends Component {
     }
 
     playSound() {
-        const audio = new Audio("/advance_notifications/static/src/sound/notify.mp3");
+        const audio = new Audio("/web/static/src/core/sounds/notification.mp3");
         audio.volume = 0.2;
         audio.play().catch(() => {});
     }

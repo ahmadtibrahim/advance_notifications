@@ -51,7 +51,7 @@ class MailMessage(models.Model):
             )
 
             self.env["bus.bus"]._sendone(
-                target_user.partner_id,
+                (self._cr.dbname, "res.partner", target_user.partner_id.id),
                 "advance_notifications_channel",
                 {
                     "id": notification.id,
