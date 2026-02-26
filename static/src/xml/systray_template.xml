@@ -1,0 +1,21 @@
+<templates xml:space="preserve">
+    <t t-name="advance_notifications.Template" owl="1">
+        <div class="o_adv_notif">
+            <div class="o_adv_icon" t-on-click="toggle">
+                <i class="fa fa-envelope"/>
+                <span t-if="state.notifications.length" class="o_adv_badge" t-esc="state.notifications.length"/>
+            </div>
+
+            <div t-if="state.open" class="o_adv_dropdown shadow">
+                <t t-foreach="state.notifications" t-as="n" t-key="n.id">
+                    <div class="o_adv_item">
+                        <div class="o_adv_content" t-on-click="() => openRecord(n.model, n.res_id)">
+                            <span t-esc="n.ai_summary || 'New Message'"/>
+                        </div>
+                        <button class="btn btn-sm btn-light" t-on-click="() => markDone(n.id)">✓</button>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+</templates>
