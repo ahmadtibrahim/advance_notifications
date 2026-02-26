@@ -1,0 +1,58 @@
+.o_adv_notif {
+    position: relative;
+}
+
+.o_adv_icon {
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+}
+
+.o_adv_badge {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    background: #875a7b;
+    color: white;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 2px 6px;
+}
+
+.o_adv_dropdown {
+    position: absolute;
+    right: 0;
+    top: 35px;
+    width: 320px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: white;
+    border-radius: 6px;
+    padding: 8px;
+    z-index: 1000;
+}
+
+.o_adv_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    border-bottom: 1px solid #eee;
+    gap: 8px;
+}
+
+.o_adv_content {
+    flex: 1;
+    cursor: pointer;
+}
+
+.o_adv_item:hover {
+    background: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+    .o_adv_dropdown {
+        width: 90vw;
+        right: 5vw;
+    }
+}
